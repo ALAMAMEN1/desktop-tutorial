@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/manageStudentsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manage Students"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/manageTeachersBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manage Teachers"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/manageModulesBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manage Modules"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/assignModulesBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Assign Modules to Teachers"/>
+</LinearLayout>

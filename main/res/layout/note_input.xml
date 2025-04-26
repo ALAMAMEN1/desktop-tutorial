@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- اسم التلميذ -->
+
+        <TextView
+            android:id="@+id/textViewStudentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"/>
+
+        <!-- اسم المادة -->
+        <TextView
+            android:id="@+id/textViewModuleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Module: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="16dp"/>
+
+        <!-- حقول الإدخال -->
+        <EditText
+            android:id="@+id/editTextTD"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="TD"
+            android:inputType="numberDecimal"
+            android:padding="8dp" />
+
+        <EditText
+            android:id="@+id/editTextTP"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="TP"
+            android:inputType="numberDecimal"
+            android:padding="8dp" />
+
+        <EditText
+            android:id="@+id/editTextExam"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Exam"
+            android:inputType="numberDecimal"
+            android:padding="8dp" />
+
+        <EditText
+            android:id="@+id/editTextCoefficient"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Coefficient"
+            android:inputType="number"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/buttonSaveNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Note"
+            android:layout_marginTop="24dp"/>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="302dp" />
+
+    </LinearLayout>
+</ScrollView>
