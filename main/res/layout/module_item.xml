@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- اسم المادة -->
+    <TextView
+        android:id="@+id/moduleName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Module Name"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingBottom="4dp" />
+
+    <!-- حقول TD, TP, Exam -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/tdInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TD: -"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tpInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TP: -"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/examInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Exam: -"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+</LinearLayout>
