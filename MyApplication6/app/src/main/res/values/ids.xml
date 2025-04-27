@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="buttonAddTeacher" type="id" />
+    <item name="spinnerTeachers" type="id" />
+    <item name="editTextCoefficient" type="id" />
+    <item name="buttonAssign" type="id" />
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4361EE</color>
+    <color name="colorPrimaryDark">#3A0CA3</color>
+    <color name="colorPrimaryLight">#4895EF</color>
+    <color name="colorPrimaryExtraLight">#E0E8FF</color>
+
+    <color name="colorAccent">#F72585</color>
+    <color name="colorAccentLight">#F78FB3</color>
+
+    <color name="colorBackground">#F8F9FA</color>
+    <color name="colorBackgroundDark">#E9ECEF</color>
+    <color name="colorCardBackground">#FFFFFF</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#212529</color>
+
+    <color name="textColorPrimary">#03A9F4</color>
+    <color name="textColorSecondary">#6C757D</color>
+    <color name="textColorTertiary">#ADB5BD</color>
+    <color name="textColorWhite">#FFFFFF</color>
+    <color name="textColorHint">#ADB5BD</color>
+    <color name="textColorDisabled">#DEE2E6</color>
+
+    <color name="colorSuccess">#4CC9F0</color>
+    <color name="colorError">#F72585</color>
+    <color name="colorErrorDark">#B5179E</color>
+    <color name="colorWarning">#F8961E</color>
+    <color name="colorWarningDark">#F3722C</color>
+    <color name="colorInfo">#4895EF</color>
+    <color name="colorInfoDark">#4361EE</color>
+
+    <color name="colorSecondary">#7209B7</color>
+    <color name="colorSecondaryDark">#560BAD</color>
+    <color name="colorSecondaryLight">#B5179E</color>
+    <color name="colorTertiary">#3A0CA3</color>
+
+    <color name="colorBorder">#E9ECEF</color>
+    <color name="colorDivider">#DEE2E6</color>
+    <color name="colorOutline">#ADB5BD</color>
+
+    <color name="gray_50">#F8F9FA</color>
+    <color name="gray_100">#E9ECEF</color>
+    <color name="gray_200">#DEE2E6</color>
+    <color name="gray_300">#CED4DA</color>
+    <color name="gray_400">#ADB5BD</color>
+    <color name="gray_500">#6C757D</color>
+    <color name="gray_600">#495057</color>
+    <color name="gray_700">#343A40</color>
+    <color name="gray_800">#212529</color>
+    <color name="gray_900">#16191C</color>
+
+    <color name="colorIconTint">#FFFFFF</color>
+    <color name="colorIconTintDark">#018786</color>
+    <color name="buttonRippleColor">#3A0CA3</color>
+    <color name="buttonPressedColor">#560BAD</color>
+    <color name="inputFieldBackground">#FFFFFF</color>
+    <color name="inputFieldBackgroundDark">#F8F9FA</color>
+
+    <color name="colorShadowLight">#1A000000</color>
+    <color name="colorShadowMedium">#33000000</color>
+    <color name="colorShadowDark">#1B1F40</color>
+
+    <color name="transparent_10">#1AFFFFFF</color>
+    <color name="transparent_20">#33FFFFFF</color>
+    <color name="transparent_50">#80FFFFFF</color>
+    <color name="transparent_80">#CCFFFFFF</color>
+
+    <color name="gradient_end">#3A0CA3</color>
+    <color name="gradient_accent_start">#F72585</color>
+    <color name="gradient_accent_end">#B5179E</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="mtrl_text_btn_text_color_selector">#018786</color>
+    <color name="mtrl_btn_stroke_color_selector">#018786</color>
+    <color name="mtrl_btn_ripple_color">@color/colorPrimaryLight</color>
+</resources>
