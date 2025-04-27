@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="اختيار نوع الحساب"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="إنشاء حساب كأدمن"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/ic_baseline_admin_panel_settings_24"
+        app:iconPadding="12dp"
+        app:iconTint="@android:color/white"
+        android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="إنشاء حساب كاستاذ"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"
+    app:cornerRadius="16dp"
+    app:icon="@drawable/ic_baseline_school_24"
+    app:iconPadding="12dp"
+    app:iconTint="@android:color/white"
+    android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="إنشاء حساب كطالب"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"
+    app:cornerRadius="16dp"
+    app:icon="@drawable/ic_baseline_person_24"
+    app:iconPadding="12dp"
+    app:iconTint="@android:color/white" />
+
+</LinearLayout>
