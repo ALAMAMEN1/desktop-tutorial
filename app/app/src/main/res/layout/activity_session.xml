@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/bg_card"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9">
+
+        <TextView
+            android:id="@+id/subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📘 المادة: جاري التحميل..."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#202124"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/teacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👨🏫 الأستاذ: جاري التحميل..."
+            android:textSize="16sp"
+            android:textColor="#5F6368"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📅 التاريخ: جاري التحميل..."
+            android:textSize="16sp"
+            android:textColor="#5F6368"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📍 الموقع: جاري التحميل..."
+            android:textSize="16sp"
+            android:textColor="#5F6368"
+            android:layout_marginBottom="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginVertical="8dp"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👤 الاسم: جاري التحميل..."
+            android:textSize="16sp"
+            android:textColor="#5F6368"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔢 رقم الطالب: جاري التحميل..."
+            android:textSize="16sp"
+            android:textColor="#5F6368"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📌 الحالة: جاري التحقق..."
+            android:textSize="18sp"
+            android:textColor="#1A73E8"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ⓘ يجب مسح كود الدخول والخروج من نفس الموقع"
+            android:textSize="14sp"
+            android:textColor="#5F6368"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"/>
+
+
+        <Button
+            android:id="@+id/confirmBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="تأكيد"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:backgroundTint="#34A853"
+            android:textColor="#FFFFFF"
+            android:visibility="visible"/>
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="العودة"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:backgroundTint="#F44336"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
