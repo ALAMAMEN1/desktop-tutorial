@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_progress"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/primary_progress"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/semesterTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="الفصل الدراسي"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/studentInfoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="الاسم: الطالب الجامعي | القسم: علوم الحاسوب"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="حساب معدل الفصل"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/accent_progress"
+        android:layout_marginTop="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/results_background"
+            android:lineSpacingExtra="8dp"
+            android:padding="16dp"
+            android:text="سوف تظهر النتائج هنا"
+            android:textColor="@color/text_primary_progress"
+            android:textSize="16sp" />
+    </ScrollView>
+</LinearLayout>

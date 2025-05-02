@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Mathe",
+    "coefficient": 3
+  },
+  {
+    "name": "physics",
+    "coefficient": 2
+  },
+  {
+    "name": "Eng",
+    "coefficient": 1
+  },
+  {
+    "name": "Fr",
+    "coefficient": 1
+  },
+  {
+    "name": "structure machine",
+    "coefficient": 3
+  }
+]
