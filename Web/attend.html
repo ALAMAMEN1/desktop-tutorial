@@ -1,29 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تسجيل الحضور</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>تسجيل الحضور</h1>
-    <div id="result" class="result"></div>
-  </div>
-
-  <script>
-    function showResult(type, message) {
-      const resultDiv = document.getElementById('result');
-      resultDiv.className = type;
-      resultDiv.textContent = message;
-    }
-
-    if (!navigator.userAgent.includes('Android') && !navigator.userAgent.includes('wv')) {
-      showResult('error', '❌ لا يمكن التسجيل من المتصفح. الرجاء استخدام تطبيق الجوال');
-    } else {
-      showResult('info', '📱 الرجاء فتح هذا الرابط من داخل تطبيق الجوال لتسجيل الحضور');
-    }
-  </script>
-</body>
-</html>
