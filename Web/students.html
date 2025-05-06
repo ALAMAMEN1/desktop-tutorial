@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>قائمة الطلاب</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <h1><i class="fas fa-users"></i> قائمة الطلاب</h1>
+    </header>
+
+    <div id="session-info" class="form-container"></div>
+    <div id="studentsTable" class="form-container"></div>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="window.close()" style="background: var(--primary); color: white; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer;">
+        <i class="fas fa-arrow-left"></i> العودة للرئيسية
+      </button>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="helpers.js"></script>
+  <script src="firebase-config.js"></script>
+  <script>
+    async function loadStudentsPage() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const sessionId = urlParams.get('session');
+      if (!sessionId) {
+        document.getElementById("session-info").innerHTML = "<p>المعرف غير موجود</p>";
+        return;
+      }
+
+      try {
+        const sessionDoc = await db.collection("sessions").doc(sessionId).get();
+        if (!sessionDoc.exists) {
+          document.getElementById("session-info").innerHTML = "<p>الحصة غير موجودة</p>";
+          return;
+        }
+
+        const sessionData = sessionDoc.data();
+        const students = sessionData.students || {};
+
+        document.getElementById("session-info").innerHTML = `
+          <h2>${sessionData.subject}</h2>
+          <p><strong>المحاضر:</strong> ${sessionData.teacher}</p>
+          <p><strong>الوقت:</strong> ${new Date(sessionData.date).toLocaleString('ar-EG')}</p>
+          <p><strong>عدد الطلاب:</strong> ${Object.keys(students).length}</p>
+        `;
+
+        let tableHTML = `
+          <table class="student-table">
+            <thead>
+              <tr>
+                <th>رقم الطالب</th>
+                <th>الحالة</th>
+                <th>وقت الدخول</th>
+                <th>وقت الخروج</th>
+              </tr>
+            </thead>
+            <tbody>
+        `;
+
+        for (const [id, data] of Object.entries(students)) {
+          let status = "غائب";
+          let statusClass = "status-absent";
+          if (data.entryTime && data.exitTime && data.entryTime < data.exitTime) {
+            status = "حاضر"; statusClass = "status-present";
+          } else if (data.entryTime) {
+            status = "دخل فقط"; statusClass = "status-partial";
+          } else if (data.exitTime) {
+            status = "خرج فقط"; statusClass = "status-partial";
+          }
+
+          tableHTML += `
+            <tr>
+              <td>${id}</td>
+              <td><span class="status-badge ${statusClass}">${status}</span></td>
+              <td>${data.entryTime ? new Date(data.entryTime).toLocaleString('ar-EG') : '--'}</td>
+              <td>${data.exitTime ? new Date(data.exitTime).toLocaleString('ar-EG') : '--'}</td>
+            </tr>
+          `;
+        }
+
+        tableHTML += "</tbody></table>";
+        document.getElementById("studentsTable").innerHTML = tableHTML;
+
+      } catch (error) {
+        console.error(error);
+        document.getElementById("session-info").innerHTML = "<p>حدث خطأ أثناء تحميل البيانات</p>";
+      }
+    }
+
+    window.onload = loadStudentsPage;
+  </script>
+</body>
+</html>
